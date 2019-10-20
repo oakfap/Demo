@@ -123,7 +123,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="globalVar.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Spawn.cpp" />
+    <ClCompile Include="Status.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="globalVar.h" />
+    <ClInclude Include="Spawn.h" />
+    <ClInclude Include="Status.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
