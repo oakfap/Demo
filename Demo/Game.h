@@ -8,20 +8,20 @@ class Game
 {
 public:
 	std::string Gamename;
+	Status defaultStat;
 public:
 	Game(std::string name);
-//	void update(std::vector <Spawn*> &AllEntity);
-	void Gravity(Spawn &Ent,int ground);
-	void Attack(Spawn &attacker, Spawn &Object);
+	void Gravity(Spawn &Ent);
+	bool Attack(Spawn &attacker, Spawn &Object);
 	bool PFCollapse(sf::FloatRect cord);
-	sf::Vector2f RandomSpawn(int left, int right, int up, int down);
+	sf::Vector2f RandomSpawn(int left, int right, int up, int down, sf::Vector2f size);
 	int findTarget(Spawn& finder, int Rep);
 	void botMove(int mode);
-	void botAttack(Spawn &ent, sf::Color clr);
+	bool botAttack(Spawn &ent, sf::Color clr);
+	void gameCondition();
 	static float calDis(sf::Vector2f finder, sf::Vector2f tracker) {
 		return  distance;
 	}
-	//bool EntCollapse(Spawn &Ent);
 	~Game();
 
 };

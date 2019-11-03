@@ -9,13 +9,21 @@ public:
 	void stand();
 	void walk();
 	void attack();
-	sf::IntRect update(bool isStand);
-
+	void block();
+	sf::IntRect update();
+	
 public:
-	int from, to , nW = 0,nH = 0;
-	int row,col;
+	sf::SoundBuffer sample;
+	sf::Sound s;
+	int from, to, nW = 0, nH = 0;
+	int fromA, toA, nAW = 0;
+	int row, col;
 	int spriteH, spriteW;
-	sf::Time now;
+	std::string state = "stand";
+	std::string actState = "block";
+     
+	sf::Time now,nowA;
+	sf::Time LastChange;
 	sf::Time deltaTime = sf::seconds(0.3);
 };
 
